@@ -1,0 +1,13 @@
+Al probar las rutas en el navegador con el servidor en ejecución, ocurre lo siguiente:
+
+1. http://localhost:3000
+   Resultado: Muestra el texto "Servidor activo" en la pantalla. 
+   Explicación: El navegador realiza una petición GET a la raíz del servidor y este responde con la cadena de texto configurada.
+
+2. http://localhost:3000/saludo
+   Resultado: Muestra el texto "Hola comunidad".
+   Explicación: El servidor procesa la ruta específica '/saludo' e invoca la respuesta correspondiente para el grupo comunitario.
+
+3. http://localhost:3000/mensaje/juan
+   Resultado: Muestra el texto "Hola juan".
+   Explicación: El servidor lee el parámetro dinámico ':nombre' desde la URL (en este caso, "juan") mediante 'req.params.nombre' y lo concatena en la respuesta de forma personalizada. Si cambiamos "juan" por otro nombre, la respuesta cambia automáticamente.
